@@ -1,0 +1,26 @@
+{
+  "name": "training-plan-mcp",
+  "module": "src/index.ts",
+  "bin": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "test": "bun test",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "import:swap": "bun run scripts/import-swap-100m.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.30.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "drizzle-orm": "^0.38.0",
+    "zod": "^3.24.0"
+  }
+}
